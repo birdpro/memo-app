@@ -1,17 +1,13 @@
-<div class="container">
+<h3>新規作成ページ</h3>
+<%= form_tag("/create") do %>
+    <div class= "form-group"> 
+        <%= label_tag "form-title", "タイトル" %>
+        <%= text_field :memos, :title, id:"form-title", class:"form-control",placeholder: "タイトル" %>
+    </div>  
+    <div class= "form-group">
+        <%= label_tag "form-content", "本文" %>   
+        <%= text_field :memos, :body, id:"form-content", class:"form-control",placeholder: "本文" %>
+    </div>
+    <%= submit_tag "メモを作成する" ,class:"btn btn-primary"%>
 
-    <h3>新規作成ページ</h3>
-    <%= form_tag("/create") do %>
-        <div class= "form-group"> 
-            <%= label_tag "form-title", "タイトル" %>
-            <%= text_field :memos, :title, id:"form-title", class:"form-control",placeholder: "タイトル" %>
-        </div>  
-        <div class= "form-group">
-            <%= label_tag "form-content", "本文" %>   
-            <%= text_field :memos, :body, id:"form-content", class:"form-control",placeholder: "本文" %>
-        </div>
-        <%= submit_tag "メモを作成する" ,class:"btn btn-primary"%>
-    
-    <% end %>
-
-</div>
+<% end %>
